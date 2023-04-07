@@ -14,4 +14,11 @@ public class FunRestController {
     public String sayHello() {
         return catName;
     }
+
+    // added whilst running to check if devtools reflected changes
+    
+    @GetMapping("/detailed")
+    public String detailedCatName() {
+        return "My cat's name is " + catName;
+    }
 }
