@@ -18,7 +18,7 @@ public class Dog implements Animal {
     }
 
     @Override
-    public int countPetting() {
+    public int petAndCount() {
         return ++petCounter;
     }
 }

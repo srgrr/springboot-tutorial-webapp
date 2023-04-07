@@ -10,7 +10,7 @@ public class Cat implements Animal {
     }
 
     @Override
-    public int countPetting() {
+    public int petAndCount() {
         return 0;
     }
 }
