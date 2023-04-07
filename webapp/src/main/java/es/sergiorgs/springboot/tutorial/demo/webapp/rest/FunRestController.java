@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FunRestController {
 
-    private final Animal animal;
+    private Animal animal;
 
     @Value("${cat.name}")
     private String catName;
@@ -30,10 +30,11 @@ public class FunRestController {
         return "My cat's name is " + catName;
     }
 
-    // This constructor is supposed to figure out that I want a cat
+    // This setter is supposed to figure out that I want a cat
     // as Animal is only implemented by Cat
+    // Can also be switched to a constructor and it will still work
     @Autowired
-    public FunRestController(Animal animal) {
+    public void setAnimal(Animal animal) {
         this.animal = animal;
     }
 }
