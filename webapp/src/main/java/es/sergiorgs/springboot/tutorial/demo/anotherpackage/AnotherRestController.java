@@ -8,17 +8,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AnotherRestController {
 
-    private Animal animal;
+    private Animal animal1;
+    private Animal animal2;
 
-    @GetMapping("/another")
-    public String another() {
-        return animal.getSound();
+    private String pet(Animal animal) {
+        return "You've pet me " + animal.countPetting() + " times!";
+    }
+
+    @GetMapping("/pet1")
+    public String pet1() {
+        return pet(animal1);
+    }
+
+    @GetMapping("/pet2")
+    public String pet2() {
+        return pet(animal2);
     }
 
     // This constructor should receive a dog
     // since it's the @Primary impl
     @Autowired
-    public AnotherRestController(Animal animal) {
-        this.animal = animal;
+    public AnotherRestController(Animal animal1, Animal animal2) {
+        this.animal1 = animal1;
+        this.animal2 = animal2;
     }
 }

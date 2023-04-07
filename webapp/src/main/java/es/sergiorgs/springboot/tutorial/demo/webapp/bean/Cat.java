@@ -8,4 +8,9 @@ public class Cat implements Animal {
     public String getSound() {
         return "meow";
     }
+
+    @Override
+    public int countPetting() {
+        return 0;
+    }
 }
