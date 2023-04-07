@@ -16,7 +16,7 @@ public class FunRestController {
     }
 
     // added whilst running to check if devtools reflected changes
-    
+
     @GetMapping("/detailed")
     public String detailedCatName() {
         return "My cat's name is " + catName;
