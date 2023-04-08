@@ -40,13 +40,10 @@ public class FunRestController {
         return "My cat's name is " + catName;
     }
 
-    // This constructor is supposed to figure out that I want a cat
-    // as Animal is only implemented by Cat
-    // Can also be switched to a setter and it will still work
     @Autowired
     public FunRestController(
             @Qualifier("cat") Animal animal,
-            PersonOutfit personOutfit
+            @Qualifier("getAlternativeOutfit") PersonOutfit personOutfit
     ) {
         this.animal = animal;
         this.personOutfit = personOutfit;
