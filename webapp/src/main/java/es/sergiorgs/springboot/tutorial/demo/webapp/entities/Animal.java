@@ -1,4 +1,4 @@
-package es.sergiorgs.springboot.tutorial.demo.webapp.bean;
+package es.sergiorgs.springboot.tutorial.demo.webapp.entities;
 
 public interface Animal {
     String getSound();

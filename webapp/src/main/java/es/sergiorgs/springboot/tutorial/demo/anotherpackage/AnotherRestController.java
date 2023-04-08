@@ -1,6 +1,6 @@
 package es.sergiorgs.springboot.tutorial.demo.anotherpackage;
 
-import es.sergiorgs.springboot.tutorial.demo.webapp.bean.Animal;
+import es.sergiorgs.springboot.tutorial.demo.webapp.entities.Animal;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
