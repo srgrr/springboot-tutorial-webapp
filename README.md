@@ -1,1 +1,1 @@
-# springboot-tutorial-webapp
+Liberally following the udemy springboot course
